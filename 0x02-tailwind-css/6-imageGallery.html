@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Image Gallery</title>
+    <!-- Link Tailwind output file -->
+    <link href="./output.css" rel="stylesheet" />
+
+    <!-- Responsive grid adjustment for small screens -->
+    <style>
+      @media (max-width: 768px) {
+        .gallery {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body class="p-4">
+    <!-- Header -->
+    <header class="bg-blue-500 text-white p-4">
+      <h1 class="text-3xl">Grid + Flex Layout with Image Gallery</h1>
+    </header>
+
+    <!-- Main Layout (Previous Task Content) -->
+    <main class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 min-h-screen">
+      <!-- Section spanning 2 columns on large screens -->
+      <section class="lg:col-span-2 flex gap-4">
+        <div class="p-4 bg-gradient-to-r from-red-200 to-red-400 w-1/2">
+          Flexbox Item 1
+        </div>
+        <div class="p-4 bg-gradient-to-r from-red-200 to-red-400 w-1/2">
+          Flexbox Item 2
+        </div>
+      </section>
+
+      <!-- Sidebar -->
+      <aside class="bg-green-200 p-4">Sidebar</aside>
+    </main>
+
+    <!-- Image Gallery Section -->
+    <section class="gallery grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+      <img
+        src="https://picsum.photos/300/200?random=1"
+        alt="Gallery Image 1"
+        class="w-full h-auto rounded-lg shadow-md"
+      />
+      <img
+        src="https://picsum.photos/300/200?random=2"
+        alt="Gallery Image 2"
+        class="w-full h-auto rounded-lg shadow-md"
+      />
+      <img
+        src="https://picsum.photos/300/200?random=3"
+        alt="Gallery Image 3"
+        class="w-full h-auto rounded-lg shadow-md"
+      />
+      <img
+        src="https://picsum.photos/300/200?random=4"
+        alt="Gallery Image 4"
+        class="w-full h-auto rounded-lg shadow-md"
+      />
+      <img
+        src="https://picsum.photos/300/200?random=5"
+        alt="Gallery Image 5"
+        class="w-full h-auto rounded-lg shadow-md"
+      />
+      <img
+        src="https://picsum.photos/300/200?random=6"
+        alt="Gallery Image 6"
+        class="w-full h-auto rounded-lg shadow-md"
+      />
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-4 mt-4">
+      <p>&copy; 2024 John Doe's Blog</p>
+    </footer>
+  </body>
+</html>
