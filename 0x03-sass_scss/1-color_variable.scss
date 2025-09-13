@@ -1,0 +1,11 @@
+// 1-color_variable.scss
+// Assign a text color using a Sass variable and apply it to body and p
+$text-color: #3d3d3d;
+
+body {
+  color: $text-color;
+}
+
+p {
+  color: $text-color;
+}

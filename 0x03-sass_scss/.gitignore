@@ -1,0 +1,14 @@
+# Ignore node_modules (big folder created by npm install)
+node_modules/
+
+# Ignore any sass cache folder
+.sass-cache/
+
+# Ignore OS-specific junk
+.DS_Store
+
+# Ignore environment files (if you create them later)
+.env
+# Ignore all JSON files except package.json
+*.json
+!package.json

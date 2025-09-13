@@ -1,0 +1,103 @@
+# 0-installation-script
+
+# Steps I took to install SASS for the alx-intermediate-frontend project
+
+# (Recorded as a plain-text installation log so reviewers can reproduce my steps)
+
+# 1) Create the directory for this task (from the repo root)
+
+# mkdir -p 0x03-sass_scss
+
+# cd 0x03-sass_scss
+
+# 2) (Optional - Ubuntu) Install nvm and Node.js 20.16
+
+# Run the nvm installer script:
+
+# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+# Then close the terminal and re-open it (or source your shell rc file).
+
+# Install Node 20.16 and use it:
+
+# nvm install 20.16
+
+# nvm use 20.16
+
+# Verify versions:
+
+# node -v
+
+# npm -v
+
+# 3) Initialize an npm project (creates package.json)
+
+# npm init -y
+
+# 4) Install SASS (as a development dependency)
+
+# NOTE: the correct npm syntax to install a specific version is "package@version".
+
+# I installed the requested version like this:
+
+# npm install --save-dev sass@3.7.4
+
+# If you prefer a global install (not recommended for projects), you can run:
+
+# npm install -g sass
+
+# 5) Create example source and output folders to test compilation
+
+# mkdir scss css
+
+# Create a test file scss/main.scss with a simple variable + rule, e.g.:
+
+# $primary: #2b6cb0;
+
+# body { color: $primary; }
+
+# 6) Compile SCSS to CSS (one-shot) to verify SASS works
+
+# npx sass scss:css
+
+# This compiles all files in scss/ into css/.
+
+# 7) (Recommended) Add a watch script to package.json so SASS recompiles automatically
+
+# In package.json add under "scripts":
+
+# "sass:watch": "sass --watch scss:css"
+
+# Then run:
+
+# npm run sass:watch
+
+# This keeps watching scss/ and updates css/ on changes.
+
+# 8) Ignore node_modules (if not already ignored)
+
+# echo "node_modules/" >> ../.gitignore # append to repository .gitignore (repo root)
+
+# 9) Commit the changes to Git
+
+# git add 0x03-sass_scss package.json package-lock.json ../.gitignore
+
+# git commit -m "chore(sass): add SASS setup and installation notes"
+
+# git push origin main
+
+# 10) Verification & troubleshooting notes
+
+# - Verify SASS CLI version: npx sass --version
+
+# - If "nvm" is not found after install, source your shell rc (e.g. ~/.bashrc or ~/.zshrc)
+
+# or re-open the terminal window.
+
+# - If npm install fails, check network, npm registry, or try clearing npm cache.
+
+# - If sass@3.7.4 is not available/compatible, consider using the latest "sass" package
+
+# and update steps accordingly: npm install --save-dev sass
+
+# End of installation log
